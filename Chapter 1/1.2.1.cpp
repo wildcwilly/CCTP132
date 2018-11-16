@@ -34,9 +34,12 @@ using namespace std;
 
 int main(void)
 {
-    cout << "Hello Chris.\n";
-    cout << "Hello Zak.\n";
-    cout << "Hello Adam.\n";
+    cout << "Hello Chris.";
+    cout  << endl;
+    cout << "Hello Zak.";
+    cout  << endl;
+    cout << "Hello Adam.";
+    cout  << endl;
 
     return 0;
 }
@@ -55,6 +58,9 @@ int main(void)
 * insert a line saying cout << endl; between two other couts and check the effects it has; does it look interesting? You're going to
   learn more about it soon;
 
+    Hello Chris.
+    Hello Zak.
+    Hello Adam.
 
 * now try to insert a mysteriously-looking sequence of chars into any of the greeting: \n – there are exactly two characters: a
   backslash and lower-case n; what happens now?;
