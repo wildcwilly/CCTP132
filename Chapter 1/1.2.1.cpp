@@ -32,11 +32,11 @@ int main(void)
 
 using namespace std;
 
-int main(void)
+int newMain(void)
 {
     cout << "Hello Chris.";
     cout  << endl;
-    cout << "Hello Zak.\n"
+    cout << "Hello Zak.\n";
     cout  << endl;
     cout << "Hello Adam.";
     cout  << endl;
@@ -74,10 +74,11 @@ int main(void)
   error – is this where the error really is?
 
     compiler says error in line 40, after the line missing the ;
-    
+
 * change the name of the main function to any other lexically correct word (e.g. Main); what happens now? Can you explain the
   result?
 
+    compiler gives undefined reference to 'main' error
 
 * remove some of the quotes (opening and closing ones respectively); does the compiler like that? What does it think of your
   actions?
