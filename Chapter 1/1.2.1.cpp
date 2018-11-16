@@ -32,7 +32,7 @@ int main(void)
 
 using namespace std;
 
-int newMain(void)
+int main(void)
 {
     cout << "Hello Chris.";
     cout  << endl;
@@ -83,4 +83,5 @@ int newMain(void)
 * remove some of the quotes (opening and closing ones respectively); does the compiler like that? What does it think of your
   actions?
 
+    IDE shows problem with missing quotes, compiler give long (multiple) error messages with missing quotes
 */
