@@ -36,7 +36,7 @@ int main(void)
 {
     cout << "Hello Chris.";
     cout  << endl;
-    cout << "Hello Zak.";
+    cout << "Hello Zak.\n";
     cout  << endl;
     cout << "Hello Adam.";
     cout  << endl;
@@ -65,6 +65,10 @@ int main(void)
 * now try to insert a mysteriously-looking sequence of chars into any of the greeting: \n – there are exactly two characters: a
   backslash and lower-case n; what happens now?;
 
+    Hello Chris.
+    Hello Zak.
+
+    Hello Adam.
 
 * try to remove any of the semicolons and look carefully at the compiler's response; pay attention to where the compiler sees an
   error – is this where the error really is?
