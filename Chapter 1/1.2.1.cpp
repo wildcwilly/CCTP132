@@ -36,7 +36,7 @@ int main(void)
 {
     cout << "Hello Chris.";
     cout  << endl;
-    cout << "Hello Zak.\n";
+    cout << "Hello Zak.\n"
     cout  << endl;
     cout << "Hello Adam.";
     cout  << endl;
@@ -73,7 +73,8 @@ int main(void)
 * try to remove any of the semicolons and look carefully at the compiler's response; pay attention to where the compiler sees an
   error – is this where the error really is?
 
-
+    compiler says error in line 40, after the line missing the ;
+    
 * change the name of the main function to any other lexically correct word (e.g. Main); what happens now? Can you explain the
   result?
 
