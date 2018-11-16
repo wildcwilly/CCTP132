@@ -23,17 +23,18 @@ int main()
 }
 */
 
-#include <iostream>//we included iostream
-#include <iomanip>//we included iomanip
-#include <string>//we included string
+#include <iostream>
+#include <iomanip>
+#include <string>
 
 int main()
 {
-    int v=10800; // 3*60*60
-    int zzz=3*60;// This is a variable to hold the value of 3 minutes in seconds
-    int zzz=5*60;// This is a variable to hold the value of 6 minutes in seconds
-    float siii=3.141526; //This is the value of pi
-    //std::cout << "result: " << result << std::endl;
-    // here we should print the v value but a programmer didn't have time to write any code
-    // but he/she likes writing long comments
+    int result=3*60*60;
+    int secPerMin = 60;   // number of seconds in minute
+    int threeMin = 3 * secPerMin; // 3 minutes in seconds
+    int sixMin = 6 * secPerMin;   // 6 minutes in seconds
+    float pi = 3.141526;  //This is the value of pi
+    std::cout << "result: " << result << std::endl;
+    
+    return 0;
 }
