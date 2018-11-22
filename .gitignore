@@ -3,6 +3,13 @@
 External Dependencies/
 Playground/
 a.out
+*.exe
+*.obj
+*.ilk
+*.log
+*.pdb
+*.idb
 CCTP132.sln
 *.vcxproj
 *.vcxproj.*
+Debug/
