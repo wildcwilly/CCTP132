@@ -1,4 +1,8 @@
 .vscode/
+.vs/
+External Dependencies/
 Playground/
 a.out
-
+CCTP132.sln
+*.vcxproj
+*.vcxproj.*
