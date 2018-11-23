@@ -104,7 +104,6 @@ int main(void) {
 		cout << "Leap year" << endl;
 	}
 
-	system("pause");
 	return 0;
 }
 
