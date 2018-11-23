@@ -110,9 +110,26 @@ int main(void)
     return 0;
 }
 
-/*
-    * is greater than or equal to 0 and less than 10, or
-    * multiplied by 2 is less than 20 and reduced by 2 is greater than minus 2, or
-    * reduced by 1 is greater than 1 and divided by 2 is less than 10, or
-    * is equal to 111.
+/* Actual output (copied from console window)
+
+Enter a value: -2
+THAT'S NOT TRUE :(
+
+Enter a value: 0
+THAT'S TRUE :)
+
+Enter a value: 4
+THAT'S TRUE :)
+
+Enter a value: 10
+THAT'S TRUE :)
+
+Enter a value: 22
+THAT'S NOT TRUE :(
+
+Enter a value: 100
+THAT'S NOT TRUE :(
+
+Enter a value: 111
+THAT'S TRUE :)
 */
