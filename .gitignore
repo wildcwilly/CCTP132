@@ -13,3 +13,4 @@ CCTP132.sln
 *.vcxproj
 *.vcxproj.*
 Debug/
+*.code-workspace
