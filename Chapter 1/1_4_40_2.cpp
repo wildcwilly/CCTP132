@@ -4,7 +4,7 @@ Chris Wild
 Take a look at the code below: it reads two integer values, manipulates them and finally outputs the k variable. The problem is that the
 manipulations have been described using natural language, so the code is completely useless now.
 We want you to act as an intelligent (naturally!) compiler and to translate the formula into real C++ notation. Try to use pre/post and
-short-cut operators – they fit perfectly into some of the steps.
+short-cut operators ï¿½ they fit perfectly into some of the steps.
 Test your code using the data we've provided.
 
 #include <iostream>
@@ -45,8 +45,8 @@ Example output
 
 Example input
 
-31
-00
+3
+100
 
 Example output
 
@@ -88,7 +88,20 @@ int main(void)
 
 	cout << k << endl;
 
-	system("pause");
-
 	return 0;
 }
+
+/* Actual output (copied from console window)
+
+Enter i: 100
+Enter j: 3
+261838
+
+Enter i: 3
+Enter j: 100
+-5
+
+Enter i: 123
+Enter j: 321
+-125
+*/
