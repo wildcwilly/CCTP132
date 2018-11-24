@@ -106,8 +106,28 @@ int main(void) {
 	cout << "Net price: " << netprice << endl;
 	cout << "Tax value: " << taxvalue << endl;
 
-	system("pause");
-
 	return 0;
 }
 
+/* Actual output (copied from console window)
+
+Enter a gross price: 123
+Enter a tax rate: 23
+Net price: 100
+Tax value: 23
+
+Enter a gross price: 123
+Enter a tax rate: 50
+Net price: 82
+Tax value: 41
+
+Enter a gross price: 123
+Enter a tax rate: 98
+Net price: 62.1212
+Tax value: 60.8788
+
+Enter a gross price: 11
+Enter a tax rate: 10
+Net price: 10
+Tax value: 1
+*/
