@@ -59,12 +59,33 @@ int main()
 	double result = 1;
 
 	// prompt and input negative power of 2 as integer
-	cout << "Enter the negative power of 2"
+	cout << "Enter the negative power of 2 (as positive number): ";
+	cin >> pow;
+
+	// calculate result by dividing 2 by itself pow times
+	for (loop = 0; loop < pow; loop++)
+	{
+		result /= 2;
+	}
+
+	// display result
+	cout.precision(20);
+	cout << "2 ^ " << pow << " = " << result << endl;
 	
 	return 0;
 }
 
 /* Actual output (copied from console window)
 
+Enter the negative power of 2 (as positive number): 0
+2 ^ 0 = 1
 
+Enter the negative power of 2 (as positive number): 1
+2 ^ 1 = 0.5
+
+Enter the negative power of 2 (as positive number): 8
+2 ^ 8 = 0.00390625
+
+Enter the negative power of 2 (as positive number): 10
+2 ^ 10 = 0.0009765625
 */
