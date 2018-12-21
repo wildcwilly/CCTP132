@@ -11,10 +11,10 @@ This means that the first five Fibonacci numbers look as follows:
 
 	1, 1, 2, 3, 5
 
-Is that clear? Of course it is! Now it's your turn – write a code asking the user for a number (let's name it n) and then print an n-th
+Is that clear? Of course it is! Now it's your turn ï¿½ write a code asking the user for a number (let's name it n) and then print an n-th
 Fibonacci number.
 
-But beware! These numbers grow very fast – use proper data types to avoid premature overflows!
+But beware! These numbers grow very fast ï¿½ use proper data types to avoid premature overflows!
 
 Test your code using the data we've provided.
 
@@ -50,7 +50,7 @@ using namespace std;
 int main()
 {
 	int number, loop;
-	long num1 = 0, num2 = 1, fibonacci = 1;
+	long long num1 = 0, num2 = 1, fibonacci = 1;	// need a long long on 32 bit Windows system
 
 	// prompt user for number and enter as integer
 	cout << "Enter a number: ";
@@ -72,11 +72,17 @@ int main()
 		cout << fibonacci << endl;
 	}
 
-	system("pause");
 	return 0;
 }
 
 /* Actual output (copied from console window)
 
+Enter a number: 8
+21
 
+Enter a number: 20
+6765
+
+Enter a number: 55
+139583862445
 */
