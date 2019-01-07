@@ -142,61 +142,29 @@ int dayOfYear(Date date) {
 }
 
 int daysBetween(Date d1, Date d2) {
-    int year, month, days;
-    
-    // check if end date is before start date
-    if ((d2.year < d1.year) ||
-        (d2.year == d1.year && d2.month < d1.month) ||
-        (d2.year == d1.year && d2.month == d1.month && d2.day < d1.day))
-            return -1;
+	int days = 0, loop;
 
-/*     // start by subtracting start date from end date
-    year = d2.year - d1.year;
-    month = d2.month - d1.month;
-    days = d2.day - d1.day;
+// if both dates in same year, subtract day of d2 from d1
+	if (d1.year == d2.year)
+		if (dayOfYear(d2) - dayOfYear(d1) >= 0)	// confirm d2 is after d1
+			return dayOfYear(d2) - dayOfYear(d1);
+	
+	// if d2 is not the same year as d1
+	if (d2.year - d1.year > 0)
+	{
+		days += (isLeap(d1.year) ? 366 : 365) - dayOfYear(d1);	// add remaining days in year of d1
 
-    // make adjustments for any negative values
-    if(days < 1)
-        days += monthLength(d1.year, d1.month);
+		for (loop = d1.year + 1; loop < d2.year; loop++)	// will be ignored if d2 year is less than 2 years after d1 year
+			days += isLeap(loop) ? 366 : 365;
 
-    if(month < 0)
-    {
-        year -= 1;
-        month += 12;
-    }
+		days += dayOfYear(d2);	// add days of year for d2
 
-    if(year < 0)
-        return -1;  // date 2 is before date 1
- */
+		return days;
+	}
 
-    // add days remaining in start date month
-    days = monthLength(d1.year, d1.month) - d1.day;
-
-    // add full months left in start year
-    for(month = d1.month + 1; month <= 12; month++)
-    {
-
-        days += monthLength(d1.year, month);
-    }
-
-    // add full months left in end year
-    for(month = 1; month < d2.month; month ++)
-    {
-        days += monthLength(d2.year, month);
-    }
-
-    // add days of end date
-    days += d2.day;
-
-    // add any years between both dates
-    if(d1.year != d2.year)
-    {
-        for(year = d1.year + 1; year < d2.year; year++)
-            days += isLeap(year) ? 366 : 365;
-    }
-
-    return days;
-}
+	// d2 is before d1
+	return -1;
+ }
 
 int main(void) {
     Date since,till;
@@ -213,5 +181,31 @@ int main(void) {
 
 /* Actual output (copied from console window)
 
+Enter first date (y m d): 2018 12 31
+Enter second date (y m d): 2019 1 7
+7
 
+Enter first date (y m d): 1901 1 1
+Enter second date (y m d): 2016 1 1
+42003
+
+Enter first date (y m d): 2001 12 30
+Enter second date (y m d): 2016 12 31
+5480
+
+Enter first date (y m d): 1999 1 31
+Enter second date (y m d): 1999 12 1
+304
+
+Enter first date (y m d): 1999 1 2
+Enter second date (y m d): 1999 1 11
+9
+
+Enter first date (y m d): 1999 2 2
+Enter second date (y m d): 1999 1 11
+-1
+
+Enter first date (y m d): 2019 2 2
+Enter second date (y m d): 2018 3 6
+-1
 */
